@@ -43,6 +43,26 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     padding: 15px 0;
 }
 
+.main-title{
+    margin: 0 125px 0 280px;
+    padding: 48px 0 40px 0;
 
-.hydrated{
+    font-size: 46px;
+    font-weight: 300;
+    color: #1e1e1e;
+}
+.main-subtitle{
+    margin: 0 125px 0 280px;
+    padding: 0 0 40px 0;
+
+    font-size: 36px;
+    font-weight: 300;
+    color: #1e1e1e;
+}
+.main-description{
+    margin: 0 125px 0 280px;
+    padding: 0 0 40px 0;
+
+    font-weight: 400;
+    color: #1e1e1e;
 }
