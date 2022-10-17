@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Others -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+        <header>
+            <img src="{% static 'img/logo_seletos_320x320.png' %}" class="sidebar-img" alt="Seletos Lancamentos">
+        </header>
+        <ul class="siderbar-link-main">
+            <li><a href="" class="sidebar-link">
+                <span class="sidebar-icon"><ion-icon name="home-outline"></ion-icon></span>
+                <span class="sidebar-text">Página Principal</span>
+            </a></li>
+            <li><a href="" class="sidebar-link">
+                <span class="sidebar-icon"><ion-icon name="people-outline"></ion-icon></span>
+                <span class="sidebar-text">Colaboradores</span>
+            </a></li>
+            <li><a href="" class="sidebar-link">
+                <span class="sidebar-icon"><ion-icon name="information-circle-outline"></ion-icon></ion-icon></span>
+                <span class="sidebar-text">Sobre</span>
+            </a></li>
+        </ul>
+    </aside>
+
+    <main>
+        
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
