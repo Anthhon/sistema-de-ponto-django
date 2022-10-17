@@ -55,7 +55,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     margin: 0 125px 0 280px;
     padding: 0 0 40px 0;
 
-    font-size: 36px;
+    font-size: 46px;
     font-weight: 300;
     color: #1e1e1e;
 }
@@ -65,4 +65,41 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 
     font-weight: 400;
     color: #1e1e1e;
+}
+
+.main-content-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pres-content-div{
+    align-items: center;
+}
+.pres-main{
+    text-align: center;
+    align-items: center;
+}
+.pres-content-div > img{
+    width: 16%;
+    height: auto;
+}
+.pres-title{
+    margin: 14px 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #f1f1f1;
+}
+.pres-link{
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration-color: #00ff99;
+}
+.pres-text{
+    color: #f1f1f1;
+}
+.pres-icon{
+    color: #f1f1f1;
+}
+.black-bg{
+    background: #1e1e1e;
 }

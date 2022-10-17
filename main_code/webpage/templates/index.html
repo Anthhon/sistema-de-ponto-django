@@ -1,12 +1,32 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Página Principal</title>
     
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Others -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body class="black-bg">
+    <main class="pres-main">
+        <div class="pres-content-div">
+            <img class="pres-img" src="{% static 'img/seletos_logo_branca.png' %}" alt="Seletos Lancamentos Logo">
+            <div class="main-content-div">
+                <h3 class="pres-title">Seja bem-vindo ao nosso<br>
+                    sistema de ponto!
+                </h3>
+                <a href="entenda-melhor/" class="pres-link">
+                    <span class="pres-text">Entenda melhor</span>
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
