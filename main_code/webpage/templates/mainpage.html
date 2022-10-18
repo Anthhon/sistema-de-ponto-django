@@ -11,8 +11,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- Others -->
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -30,7 +28,7 @@
                 <span class="sidebar-icon"><ion-icon name="help-buoy-outline"></ion-icon></ion-icon></span>
                 <span class="sidebar-text">Entenda melhor</span>
             </a></li>
-            <li><a href="" class="sidebar-link">
+            <li><a href="{% url 'webpage:colaboradores' %}" class="sidebar-link">{% comment %}  {% endcomment %}
                 <span class="sidebar-icon"><ion-icon name="people-outline"></ion-icon></span>
                 <span class="sidebar-text">Colaboradores</span>
             </a></li>
@@ -66,5 +64,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Others -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 </html>
