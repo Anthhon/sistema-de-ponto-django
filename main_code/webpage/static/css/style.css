@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* CSS BASE */
+
 body{
-    font-family: 'Roboto', sans-serif;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
@@ -12,66 +14,8 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     text-decoration: none;
 }
 
-.sidebar{
-    position: fixed;
-    left: 0;
-    width: 210px;
-    height: 100%;
-    background: #424242;
-}
-.sidebar > header{
-    text-align: center;
-    background-color: #1e1e1e;
-    user-select: none;
-}
-.sidebar-link{
-    display: flex;
-    justify-content: left;
-    padding-top: 15px;
-    margin: 0 34px;
-    transition: all 0.3s ease 0s;
-}
-.sidebar-link:hover{
-    padding-left: 6px;
-}
-.sidebar-text, .sidebar-icon{
-    font-size: 14px;
-    color: #f1f1f1;
-    margin: 0 2px;
-}
-.sidebar-img{
-    padding: 15px 0;
-}
+/* Página de apresentação */
 
-.main-title{
-    margin: 0 125px 0 280px;
-    padding: 48px 0 40px 0;
-
-    font-size: 46px;
-    font-weight: 300;
-    color: #1e1e1e;
-}
-.main-subtitle{
-    margin: 0 125px 0 280px;
-    padding: 0 0 40px 0;
-
-    font-size: 46px;
-    font-weight: 300;
-    color: #1e1e1e;
-}
-.main-description{
-    margin: 0 125px 0 280px;
-    padding: 0 0 40px 0;
-
-    font-weight: 400;
-    color: #1e1e1e;
-}
-
-.main-content-div{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 .pres-content-div{
     display: block;
     margin-top: 17%;
@@ -103,4 +47,95 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 }
 .black-bg{
     background: #1e1e1e;
+}
+
+
+/* Barra lateral */
+
+.sidebar{
+    left: 0;
+    width: 210px;
+    height: 100%;
+    position: fixed;
+    background: #424242;
+}
+.sidebar > header{
+    user-select: none;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+.sidebar-link{
+    display: flex;
+    margin: 0 34px;
+    padding-top: 15px;
+    justify-content: left;
+    transition: all 0.3s ease 0s;
+}
+.sidebar-link:hover{
+    padding-left: 6px;
+}
+.sidebar-text, .sidebar-icon{
+    margin: 0 2px;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+.sidebar-img{
+    padding: 15px 0;
+}
+
+
+/* Página principal */
+
+.main-title{
+    padding: 48px 0 40px 0;
+    margin: 0 125px 0 280px;
+
+    font-size: 46px;
+    font-weight: 300;
+    color: #1e1e1e;
+}
+.main-subtitle{
+    padding: 0 0 40px 0;
+    margin: 0 125px 0 280px;
+
+    font-size: 46px;
+    font-weight: 300;
+    color: #1e1e1e;
+}
+.main-description{
+    padding: 0 0 40px 0;
+    margin: 0 125px 0 280px;
+
+    font-weight: 400;
+    color: #1e1e1e;
+}
+.main-content-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Funcionários */
+
+.employee-content{
+    padding: 15px 0;
+}
+.employee-box{
+    padding: 25px 0 25px 0;
+    margin: 0 125px 0 280px;
+    
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 10px #1e1e1e35;
+
+    color: black;
+    font-size: larger;
+    text-decoration: none;
+}
+.employee-box > p{
+    margin: 0 30px;
+    padding-left: 15px;
 }
