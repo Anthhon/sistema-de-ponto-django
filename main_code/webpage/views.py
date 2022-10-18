@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from .models import Funcionario
+from django.core.paginator import Paginator
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 def mainPage(request):
@@ -10,5 +12,13 @@ def homePage(request):
 def aboutPage(request):
     return render(request, 'about.html')
 
-def colaboradores(request):
-    return render(request, 'colaboradores.html')
+def employeesPage(request):
+    employees_list = Funcionario.objects.all()
+
+    paginator = Paginator(employees_list, 6)
+
+    page = request.GET.get('page')
+
+    employees = paginator.get_page(page)
+
+    return render(request, 'employees.html', {'employees': employees})

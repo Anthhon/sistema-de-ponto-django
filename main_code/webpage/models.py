@@ -1,26 +1,30 @@
-from django.db import models
+from django.db.models import CharField, DateField, IntegerField, Model
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 # Create your models here.
+class Funcionario(Model):
+    nome = CharField(max_length=12)
+    sobrenome = CharField(max_length=15)
+    admissão = DateField()
+    cargo = CharField(max_length=25)
+    idade = IntegerField(
+        validators=[
+            MaxValueValidator(100),
+            MinValueValidator(10)
+        ]
+     )
+    gênero = CharField(max_length=20)
+    aniversário = DateField()
+    endereço = CharField(max_length=75)
+    CPF = IntegerField(max_length=11)
 
-class Endereco(models.Model):
-    rua = models.CharField()
-    bairro = models.CharField()
-    numero = models.IntegerField()
-    complemento = models.CharField()
+# Coloca o nome e cargo do funcionário como o próprio título na tela de administrador
+    def __str__(self):
+        return (f"{self.nome} {self.sobrenome} - {self.cargo}")
 
-
-class Funcionario(models.Model):
-    primeiro_nome = models.CharField(max_length=128)
-    sobrenome = models.CharField(max_length=128)
-    cpf = models.IntegerField(max_length=11)
-    idade = models.IntegerField(max_length=3)
-    nascimento = models.DateTimeField(auto_now_add=True)
-    endereco = models.ForeignKey(Endereco, on_delete=models.DO_NOTHING, related_name="funcionario")
-
-
-"""
-Primeiro nome
+'''
+    Primeiro nome
     Sobrenome
     Data de admissão
     Idade
@@ -28,4 +32,4 @@ Primeiro nome
     Data de aniversário
     Endereço
     CPF
-"""
+'''

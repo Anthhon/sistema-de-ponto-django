@@ -10,8 +10,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    
 </head>
 <body>
 
@@ -21,25 +19,26 @@
             <img src="{% static 'img/logo_seletos_320x320.png' %}" class="sidebar-img" alt="Seletos Lancamentos">
         </header>
         <ul class="siderbar-link-main">
-            <li><a href="/" class="sidebar-link">
+            <li><a href="{% url 'webpage:webpage-view' %}" class="sidebar-link">
                 <span class="sidebar-icon"><ion-icon name="home-outline"></ion-icon></span>
                 <span class="sidebar-text">Página Principal</span>
             </a></li>
-            <li><a href="/entenda-melhor/" class="sidebar-link">
+            <li><a href="{% url 'webpage:homepage-view' %}" class="sidebar-link">
                 <span class="sidebar-icon"><ion-icon name="help-buoy-outline"></ion-icon></ion-icon></span>
                 <span class="sidebar-text">Entenda melhor</span>
             </a></li>
-            <li><a href="" class="sidebar-link">
+            <li><a href="{% url 'webpage:employeespage-view' %}" class="sidebar-link">{% comment %}  {% endcomment %}
                 <span class="sidebar-icon"><ion-icon name="people-outline"></ion-icon></span>
                 <span class="sidebar-text">Colaboradores</span>
             </a></li>
-            <li><a href="/sobre/" class="sidebar-link">
+            <li><a href="{% url 'webpage:aboutpage-view' %}" class="sidebar-link">
                 <span class="sidebar-icon"><ion-icon name="information-circle-outline"></ion-icon></ion-icon></span>
                 <span class="sidebar-text">Sobre</span>
             </a></li>
         </ul>
     </aside>
 
+    <!-- Conteúdo da página -->
     <main>
         <content>
             <h1 class="main-title">Sobre o sistema</h1>
@@ -50,9 +49,9 @@
         </content>
     </main>
 
+    <!-- Others -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- Others -->
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 </html>

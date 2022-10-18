@@ -1,9 +1,16 @@
 from unicodedata import name
+
+
 from django.urls import path
-from .views import mainPage, homePage, aboutPage, colaboradores
+
+
 from . import views
 
-app
+from .views import aboutPage, colaboradores, homePage, mainPage
+
+app_name = "webpage"
+
+
 
 urlpatterns = [
     path('', mainPage, name='webpage-view'),
