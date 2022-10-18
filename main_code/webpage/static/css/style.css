@@ -120,6 +120,10 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 
 .employee-content{
     padding: 15px 0;
+    transition: all 0.3s ease 0s;
+}
+.employee-content:hover{
+    padding-left: 15px;
 }
 .employee-box{
     padding: 25px 0 25px 0;
