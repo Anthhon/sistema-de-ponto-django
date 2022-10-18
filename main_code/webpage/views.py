@@ -15,7 +15,7 @@ def aboutPage(request):
 def employeesPage(request):
     employees_list = Funcionario.objects.all()
 
-    paginator = Paginator(employees_list, 5)
+    paginator = Paginator(employees_list, 6)
 
     page = request.GET.get('page')
 

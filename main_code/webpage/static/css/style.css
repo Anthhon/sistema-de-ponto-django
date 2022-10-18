@@ -14,6 +14,8 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     text-decoration: none;
 }
 
+
+
 /* Página de apresentação */
 
 .pres-content-div{
@@ -50,6 +52,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 }
 
 
+
 /* Barra lateral */
 
 .sidebar{
@@ -84,6 +87,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 }
 
 
+
 /* Página principal */
 
 .main-title{
@@ -116,6 +120,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 }
 
 
+
 /* Funcionários */
 
 .employee-content{
@@ -143,6 +148,8 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     margin: 0 30px;
     padding-left: 15px;
 }
+
+
 
 /* Paginação */
 
