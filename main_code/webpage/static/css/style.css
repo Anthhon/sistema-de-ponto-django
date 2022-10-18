@@ -73,15 +73,16 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     flex-direction: column;
 }
 .pres-content-div{
-    align-items: center;
-}
-.pres-main{
-    text-align: center;
-    align-items: center;
+    display: block;
+    margin-top: 17%;
 }
 .pres-content-div > img{
     width: 16%;
     height: auto;
+}
+.pres-main{
+    text-align: center;
+    align-items: center;
 }
 .pres-title{
     margin: 14px 0;

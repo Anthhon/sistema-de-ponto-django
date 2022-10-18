@@ -10,5 +10,5 @@ def homePage(request):
 def aboutPage(request):
     return render(request, 'about.html')
 
-def colaboradores(request):
-    return render(request, 'colaboradores.html')
+def employeesPage(request):
+    return render(request, 'employees.html')

@@ -10,8 +10,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    
 </head>
 <body>
 
@@ -21,19 +19,19 @@
             <img src="{% static 'img/logo_seletos_320x320.png' %}" class="sidebar-img" alt="Seletos Lancamentos">
         </header>
         <ul class="siderbar-link-main">
-            <li><a href="/" class="sidebar-link">
+            <li><a href="{% url 'webpage:webpage-view' %}" class="sidebar-link">
                 <span class="sidebar-icon"><ion-icon name="home-outline"></ion-icon></span>
                 <span class="sidebar-text">Página Principal</span>
             </a></li>
-            <li><a href="/entenda-melhor/" class="sidebar-link">
+            <li><a href="{% url 'webpage:homepage-view' %}" class="sidebar-link">
                 <span class="sidebar-icon"><ion-icon name="help-buoy-outline"></ion-icon></ion-icon></span>
                 <span class="sidebar-text">Entenda melhor</span>
             </a></li>
-            <li><a href="" class="sidebar-link">
+            <li><a href="{% url 'webpage:employeespage-view' %}" class="sidebar-link">{% comment %}  {% endcomment %}
                 <span class="sidebar-icon"><ion-icon name="people-outline"></ion-icon></span>
                 <span class="sidebar-text">Colaboradores</span>
             </a></li>
-            <li><a href="/sobre/" class="sidebar-link">
+            <li><a href="{% url 'webpage:aboutpage-view' %}" class="sidebar-link">
                 <span class="sidebar-icon"><ion-icon name="information-circle-outline"></ion-icon></ion-icon></span>
                 <span class="sidebar-text">Sobre</span>
             </a></li>
@@ -42,7 +40,7 @@
 
     <main>
         <content>
-            <h1 class="main-title">Sobre o sistema</h1>
+            <h1 class="main-title">Colaboradores</h1>
             <p class="main-description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate aliquid, illum vero, nisi cupiditate pariatur labore temporibus possimus facere quaerat, consectetur nam. Est nostrum quisquam eius deserunt obcaecati atque repellendus.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eaque nostrum iusto eveniet, ipsa fugit praesentium facilis enim unde neque aut. Quasi pariatur doloribus hic ea. Dolores dolor magni natus.
