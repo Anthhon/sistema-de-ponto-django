@@ -128,3 +128,11 @@ MEDIA_ROOT = 'media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    "welcome_sign": "Seja bem-vindo!",
+    "copyright": "Seletos Lançamentos",
+
+    # Whether to display the side menu
+    "show_sidebar": False,
+}
