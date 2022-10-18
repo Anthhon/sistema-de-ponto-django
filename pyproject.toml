@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "seletos-sistema-de-ponto"
+version = "0.1.0"
+description = "Um sistema robusto para gerenciamento de funcionarios"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "seletos_sistema_de_ponto"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
