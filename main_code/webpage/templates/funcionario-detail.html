@@ -10,6 +10,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
 
@@ -38,54 +39,26 @@
         </ul>
     </aside>
 
-    <!-- Botão de cada colaborador -->
+    <!-- Conteúdo da página -->
     <main>
-
-        <!--Texto descritivo -->
-        <article>
-            <h1 class="main-title">Colaboradores</h1>
+        <content>
+            <h1 class="main-title">Página Principal</h1>
             <p class="main-description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate aliquid, illum vero, nisi cupiditate pariatur labore temporibus possimus facere quaerat, consectetur nam. Est nostrum quisquam eius deserunt obcaecati atque repellendus.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eaque nostrum iusto eveniet, ipsa fugit praesentium facilis enim unde neque aut. Quasi pariatur doloribus hic ea. Dolores dolor magni natus.
             </p>
-        </article>
-
-        <!-- Funcionários -->
-        {% for employee in employees %}
-        <div class="employee-content">
-            <a href="{% url 'webpage:detailEmployees' employee.pk %}" class="employee-box">
-                <p class="employee-firstname">
-                    <strong>{{employee.nome}}</strong>
-                </p>
-                <p class="employee-lastname">
-                    <strong>{{employee.sobrenome}}</strong>
-                </p>
-                <p class="employee-job">
-                    {{employee.cargo}}
-                </p>
-                <p class="employee-sex">
-                    {{employee.gênero}}
-                </p>
-            </a>
-        </div>
-        {% endfor %}
-
-        <div class="pagination">
-            <span class="step-links">
-                {% if employees.has_previous %}
-                    <a href="?page={{ employees.previous_page_number }}"><i class="step-link-icon"><ion-icon name="chevron-back-outline"></ion-icon></i></a>
-                {% endif %}
-
-                <span class="current-page">
-                    {{ employees.number }} de {{ employees.paginator.num_pages }}
-                </span>
-
-                {% if employees.has_next %}
-                    <a href="?page={{ employees.next_page_number }}"><i class="step-link-icon"><ion-icon name="chevron-forward-outline"></ion-icon></i></a>
-                {% endif %}
-            </span>
-        </div>
-
+        </content>
+        <content>
+            <h1 class="main-subtitle">Colaboradores</h1>
+            <p class="main-description">
+                {{funcionario}}
+                {{funcionario.nome}}
+                {{funcionario.sobrenome}}
+            </p>
+        </content>
+        <content>
+            <h1 class="main-subtitle">Sobre</h1>
+            <p class="main-description">
+            </p>
+        </content>
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
