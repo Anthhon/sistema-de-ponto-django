@@ -70,6 +70,22 @@
         </div>
         {% endfor %}
 
+        <div class="pagination">
+            <span class="step-links">
+                {% if employees.has_previous %}
+                    <a href="?page={{ employees.previous_page_number }}"><i class="step-link-icon"><ion-icon name="chevron-back-outline"></ion-icon></i></a>
+                {% endif %}
+
+                <span class="current-page">
+                    {{ employees.number }} de {{ employees.paginator.num_pages }}
+                </span>
+
+                {% if employees.has_next %}
+                    <a href="?page={{ employees.next_page_number }}"><i class="step-link-icon"><ion-icon name="chevron-forward-outline"></ion-icon></i></a>
+                {% endif %}
+            </span>
+        </div>
+
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

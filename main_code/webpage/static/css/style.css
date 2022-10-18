@@ -143,3 +143,21 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     margin: 0 30px;
     padding-left: 15px;
 }
+
+/* Paginação */
+
+.pagination{
+    margin-top: 20px;
+    margin-left: 50%;
+}
+.step-links{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.step-links > .current-page{
+    margin: 0 5px;
+}
+.step-link-icon {
+    color: #00ff99;
+}
