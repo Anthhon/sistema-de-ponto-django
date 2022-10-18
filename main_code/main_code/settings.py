@@ -136,3 +136,5 @@ JAZZMIN_SETTINGS = {
     # Whether to display the side menu
     "show_sidebar": False,
 }
+
+JAZZMIN_SETTINGS["show_ui_builder"] = True
