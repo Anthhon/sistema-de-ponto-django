@@ -18,7 +18,7 @@ class Funcionario(Model):
     endereço = CharField(max_length=75)
     CPF = IntegerField(max_length=11)
 
-# Coloca o nome da tarefa como o próprio título na tela de administrador
+# Coloca o nome e cargo do funcionário como o próprio título na tela de administrador
     def __str__(self):
         return (f"{self.nome} {self.sobrenome} - {self.cargo}")
 

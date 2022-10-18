@@ -40,6 +40,8 @@
 
     <!-- Botão de cada colaborador -->
     <main>
+
+        <!--Texto descritivo -->
         <article>
             <h1 class="main-title">Colaboradores</h1>
             <p class="main-description">
@@ -48,23 +50,25 @@
             </p>
         </article>
 
+        <!-- Funcionários -->
+        {% for employee in employees %}
         <div class="employee-content">
             <a href="#" class="employee-box">
                 <p class="employee-firstname">
-                    <strong>Anthony</strong>
+                    <strong>{{employee.nome}}</strong>
                 </p>
                 <p class="employee-lastname">
-                    <strong>Silva</strong>
+                    <strong>{{employee.sobrenome}}</strong>
                 </p>
                 <p class="employee-job">
-                    Developer
+                    {{employee.cargo}}
                 </p>
                 <p class="employee-sex">
-                    Homem
+                    {{employee.gênero}}
                 </p>
             </a>
         </div>
-        
+        {% endfor %}
 
     </main>
 
