@@ -42,7 +42,7 @@
                     <!-- Funcionário -->
                     <select name="employees" id="employees">
                         {% for employee in employees %}
-                        <option value="{{ employee.pk }}">{{ employee.nome }}</option>
+                        <option value="{{ employee.pk }}">{{ employee.nome }} {{ employee.sobrenome }}</option>
                         {% endfor %}
                     </select>
 

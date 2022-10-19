@@ -58,7 +58,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     background-color: #dfdede;
 }
 .ep-box > select{
-    padding: 2px 22px;
+    padding: 2px 6px;
 
     border-radius: 5px;
     border: 1px solid #f1f1f1;
@@ -121,6 +121,9 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 }
 .button-row > button:hover{
     padding: 8px 36px;
+}
+#employees > option{
+    text-align: center;
 }
 #extra-button{
     margin: 10px 0;
