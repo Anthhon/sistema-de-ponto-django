@@ -20,7 +20,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 
 .pres-content-div{
     display: block;
-    margin-top: 17%;
+    margin-top: 8%;
 }
 .pres-content-div > img{
     width: 16%;
@@ -36,6 +36,9 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     font-weight: 300;
     color: #f1f1f1;
 }
+.pres-title > strong{
+    color: #00ff99;
+}
 .pres-link{
     font-size: 18px;
     font-weight: 300;
@@ -47,6 +50,81 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 .pres-icon{
     color: #f1f1f1;
 }
+.ep-box{
+    padding: 20px;
+    margin: 15px 35%;
+    
+    border-radius: 10px;
+    background-color: #dfdede;
+}
+.ep-box > select{
+    padding: 2px 22px;
+
+    border-radius: 5px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 2px 2px 10px #1e1e1e35;
+}
+.pres-input-span{
+    display: flex;
+    margin: 20px 0 5px 0;
+    justify-content: center;
+}
+.pres-input{
+    width: 250px;
+    height: 40px;
+    
+    font-size: 20px;
+    text-align: center;
+    
+    border-radius: 10px;
+    border: 0px solid #000000;
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 10px #1e1e1e35;
+
+    transition: all 0.3s ease 0s;
+}
+.pres-input:hover{
+    width: 300px;
+}
+.buttons-main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.buttons-main-div > p{
+    margin: 0 0;
+    padding: 5px 0;
+    font-weight: 400;
+    font-size: small;
+    color: #000000a1;
+}
+.button-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.button-row > button{
+    cursor: pointer;
+
+    margin: 0 5px;
+    padding: 8px 32px;
+
+    font-size: 18px;
+    font-weight: 300;
+
+    color: black;
+    border-radius: 5px;
+    border: 0px solid #ffffff;
+    box-shadow: 2px 2px 10px #1e1e1e35;
+
+    transition: all 0.3s ease 0s;
+}
+.button-row > button:hover{
+    padding: 8px 36px;
+}
+#extra-button{
+    margin: 10px 0;
+} 
 .black-bg{
     background: #1e1e1e;
 }
