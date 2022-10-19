@@ -78,7 +78,6 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     
     border-radius: 10px;
     border: 0px solid #000000;
-    background-color: #f1f1f1;
     box-shadow: 2px 2px 10px #1e1e1e35;
 
     transition: all 0.3s ease 0s;
@@ -114,6 +113,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 
     color: black;
     border-radius: 5px;
+    background-color: #ffffff;
     border: 0px solid #ffffff;
     box-shadow: 2px 2px 10px #1e1e1e35;
 
