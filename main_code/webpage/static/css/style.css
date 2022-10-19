@@ -168,3 +168,28 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 .step-link-icon {
     color: #000000;
 }
+
+
+
+/* Descrição */
+
+.desc-row{
+    margin: 0 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: left;
+}
+.desc-row > p {
+    margin: 0 45px 0 0;
+    padding: 10px 0;
+}
+.desc-box{
+    padding: 30px;
+    margin: 0 125px 0 280px;
+    
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 10px #1e1e1e35;
+}

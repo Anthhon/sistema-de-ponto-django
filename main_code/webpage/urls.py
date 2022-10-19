@@ -1,12 +1,17 @@
-from unicodedata import name
-from django.urls import path
-from .views import mainPage, homePage, aboutPage, employeesPage
+# from unicodedata import name
 
-app_name = 'webpage'
+from django.urls import path
+
+from . import views
+from .views import (aboutPage, detailEmployees, employeesPage, homePage, mainPage)
+
+app_name = "webpage"
 
 urlpatterns = [
     path('', mainPage, name='webpage-view'),
     path('entenda-melhor/', homePage, name='homepage-view'),
     path('sobre/', aboutPage, name='aboutpage-view'),
-    path('colaboradores/', employeesPage, name='employeespage-view'),
+    path('colaborador/',employeesPage,name='employeespage-view'),
+    path('colaborador-info/<int:id>', detailEmployees, name='employeeinfo-view'),
+    path('',views.aboutPage),
 ]

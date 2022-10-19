@@ -53,7 +53,7 @@
         <!-- Funcionários -->
         {% for employee in employees %}
         <div class="employee-content">
-            <a href="#" class="employee-box">
+            <a href="{% url 'webpage:employeeinfo-view' employee.pk %}" class="employee-box">
                 <p class="employee-firstname">
                     <strong>{{employee.nome}}</strong>
                 </p>
