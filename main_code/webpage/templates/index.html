@@ -41,10 +41,9 @@
 
                     <!-- Funcionário -->
                     <select name="employees" id="employees">
-                        <option value="Nome 1">Nome 1</option>
-                        <option value="Nome 2">Nome 2</option>
-                        <option value="Nome 3">Nome 3</option>
-                        <option value="Nome 4">Nome 4</option>
+                        {% for employee in employees %}
+                        <option value="{{ employee.pk }}">{{ employee.nome }}</option>
+                        {% endfor %}
                     </select>
 
                     <!-- Botões -->

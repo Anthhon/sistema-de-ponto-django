@@ -26,8 +26,7 @@ class Funcionario(Model):
     gênero = ForeignKey(Gênero, on_delete=RESTRICT)
     aniversário = DateField()
     endereço = CharField(max_length=75)
-    CPF = IntegerField()#max_length' is ignored when used with IntegerField.
+    CPF = IntegerField()
 
-# Coloca o nome e cargo do funcionário como o próprio título na tela de administrador
     def __str__(self):
         return (f"{self.nome} {self.sobrenome} - {self.cargo}")
