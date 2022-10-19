@@ -1,11 +1,8 @@
-from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import DetailView, ListView
-
+# from django.views.generic import DetailView, ListView
+from django.core.paginator import Paginator
 from .models import Funcionario
 
-TEMPLATE_EMPLOYEES_PATH = "employees.html"
-# Create your views here.
 def mainPage(request):
     return render(request, 'index.html')
 
@@ -19,7 +16,7 @@ def aboutPage(request):
 def employeesPage(request):
     employees_list = Funcionario.objects.all()
 
-    paginator = Paginator(employees_list, 1)
+    paginator = Paginator(employees_list, 6)
 
     page = request.GET.get('page')
 
@@ -28,31 +25,30 @@ def employeesPage(request):
     return render(request, 'employees.html', {'employees': employees})
 
 
-def detailEmployees(request, id_funcionario):
-    funcionario = Funcionario.objects.get(id=id_funcionario)
-    """ alterar para get_object para o antony """
-    TEMPLATE_DETAIL_EMPLYOEES_PATH = 'funcionario-detail.html'
-    context = {'funcionario':funcionario}
-    return render(request,TEMPLATE_DETAIL_EMPLYOEES_PATH,context)
+def detailEmployees(request, id):
+    employee_info = get_object_or_404(Funcionario, pk=id)
+    return render(request, 'employees-info.html', {'employee_info': employee_info})
     
 
-class EployeesTemplateListView(ListView):
-    paginator_class = Paginator
-    #paginate_orphans = 1
-    model = Funcionario
-    template_name = TEMPLATE_EMPLOYEES_PATH
-    paginate_by = 1
-    context_object_name = "employees"
+
+
+# class EployeesTemplateListView(ListView):
+#     paginator_class = Paginator
+#     #paginate_orphans = 1
+#     model = Funcionario
+#     template_name = TEMPLATE_EMPLOYEES_PATH
+#     paginate_by = 1
+#     context_object_name = "employees"
     
-    """ def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["employees"] = self.paginator_class
-        return context """
+#     """ def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context["employees"] = self.paginator_class
+#         return context """
     
     
-class ModelDetailView(DetailView):
-    model = Funcionario
-    template_name = "funcionario-detalhe.html"
+# class ModelDetailView(DetailView):
+#     model = Funcionario
+#     template_name = "funcionario-detalhe.html"
     
 
     
