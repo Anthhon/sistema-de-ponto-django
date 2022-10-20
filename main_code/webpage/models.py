@@ -12,10 +12,6 @@ class Cargo(Model):
     def __str__(self):
         return self.cargo
 
-
-
-
-
 # Create your models here.
 class Funcionario(Model):
     nome = CharField(max_length=32)
@@ -46,13 +42,3 @@ class CheckIn(Model):
 
     def __str__(self):
         return (f"{self.funcionario} - {self.dia}")
-
-
-class Horario(Model):
-    horario_inicio_manha = models.DateTimeField(auto_now_add=False)
-    horario_fim_manha = models.DateTimeField(auto_now=False, auto_now_add=False)
-    horario_inicio_tarde = models.DateTimeField(auto_now=False, auto_now_add=False)
-    horario_fim_tarde = models.DateTimeField(auto_now=False, auto_now_add=False)
-    funcionario = ForeignKey(Funcionario, on_delete=CASCADE)
-    def __str__(self):
-        return (f"{self.funcionario.nome} {self.horario}")
