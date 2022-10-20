@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 
     # Minhas aplicações
     'webpage',
+    
+    #dependnencias
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
