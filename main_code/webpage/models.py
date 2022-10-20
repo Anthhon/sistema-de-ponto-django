@@ -37,7 +37,7 @@ class Funcionario(Model):
 
 class CheckIn(Model):
     #apesar do python aceitar pontuações não coloque, pois as urls tem problemas com pontuações
-    funcionario = ForeignKey(Funcionario, on_delete=RESTRICT, related_name="checkin")
+    funcionario = ForeignKey(Funcionario, on_delete=RESTRICT)
     dia = DateField()
     entrada_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
     saida_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)

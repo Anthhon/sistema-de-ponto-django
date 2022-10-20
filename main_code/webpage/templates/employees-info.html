@@ -82,7 +82,7 @@
             </div>
             <h1 class="main-title">Histórico da semana</h1>
             <div class="check-box">
-                {% for checkin in employee_info.checkin.all %}
+                {% for checkin in checkins %}
                 <content class="check-row">
                     <p class="main-check">
                         {{checkin.dia}}
