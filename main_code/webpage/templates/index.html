@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
     
-
-    
     
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -20,12 +18,57 @@
     <!-- Conteúdo da página -->
     <main class="pres-main">
         <content class="pres-content-div">
+            
+            <!-- Logo -->
             <img class="pres-img" src="{% static 'img/seletos_logo_branca.png' %}" alt="Seletos Lancamentos Logo">
+
+            <!-- Conteúdo -->
             <div class="main-content-div">
+
+                <!-- Saudação -->
                 <h3 class="pres-title">
                     <strong>Seja bem-vindo</strong> ao nosso<br>
                     sistema de ponto!
                 </h3>
+                
+                <!-- Ponto eletrônico -->
+                <div class="ep-box">
+                    
+                    <!-- Horário -->
+                    <span class="pres-input-span">
+                        <input type="time" id="quantity" name="quantity" min="5" max="5" placeholder="Digite um horário" class="pres-input">
+                    </span>
+
+                    <!-- Funcionário -->
+                    <select name="employees" id="employees">
+                        {% for employee in employees %}
+                        <option value="{{ employee.pk }}">{{ employee.nome }} {{ employee.sobrenome }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <!-- Botões -->
+                    <div class="buttons-main-div">
+
+                        <p>Manhã</p>
+                        <span class="button-row">
+                            <button type="submit">Entrada</button>
+                            <button type="submit">Saída</button>
+                        </span>
+                        
+                        <p>Tarde</p>
+                        <span class="button-row">
+                            <button type="submit">Entrada</button>
+                            <button type="submit">Saída</button>
+                        </span>
+
+                        <!-- Extra -->
+                        <span class="button-row" id="extra-button">
+                            <button type="submit">Hora extra</button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Veja mais -->
                 <a href="{% url 'webpage:homepage-view' %}" class="pres-link">
                     <span class="pres-text">Veja mais</span>
                 </a>

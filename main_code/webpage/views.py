@@ -4,7 +4,8 @@ from django.core.paginator import Paginator
 from .models import Funcionario
 
 def mainPage(request):
-    return render(request, 'index.html')
+    employees = Funcionario.objects.all()
+    return render(request, 'index.html', {'employees':employees})
 
 def homePage(request):
     return render(request, 'mainpage.html')
