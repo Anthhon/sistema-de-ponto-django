@@ -1,8 +1,8 @@
 # from django.views.generic import DetailView, ListView
+import datetime
+from .models import CheckIn, Funcionario
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
-
-from .models import Funcionario
 
 
 def mainPage(request):
@@ -15,7 +15,6 @@ def homePage(request):
 def aboutPage(request):
     return render(request, 'about.html')
 
-
 def employeesPage(request):
     employees_list = Funcionario.objects.all()
 
@@ -27,9 +26,15 @@ def employeesPage(request):
 
     return render(request, 'employees.html', {'employees': employees})
 
-
 def detailEmployees(request, id):
     employee_info = get_object_or_404(Funcionario, pk=id)
-    return render(request, 'employees-info.html', {'employee_info': employee_info})
     
+    checkin_list = Funcionario.objects.all()
 
+    paginator = Paginator(checkin_list, 1)
+
+    page = request.GET.get('page')
+
+    checkins = paginator.get_page(page)
+
+    return render(request, 'employees-info.html', {'employee_info': employee_info, 'checkin': checkin_list})
