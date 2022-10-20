@@ -24,7 +24,10 @@ class Funcionario(Model):
             MinValueValidator(10)
         ]
      )
-    genero = CharField(max_length=30,choices=[('m','Masculino'),('f','Feminino'),('NA','Prefiro não opinar')])
+    genero = CharField(max_length=30,choices=[
+        ('Masculino','Masculino'),
+        ('Feminino','Feminino'),
+        ('NA','Prefiro não opinar')])
     aniversário = DateField()
     endereço = CharField(max_length=75)
     CPF = IntegerField()
@@ -34,7 +37,7 @@ class Funcionario(Model):
 
 class CheckIn(Model):
     #apesar do python aceitar pontuações não coloque, pois as urls tem problemas com pontuações
-    funcionario = ForeignKey(Funcionario, on_delete=RESTRICT,related_name="checkin")
+    funcionario = ForeignKey(Funcionario, on_delete=RESTRICT, related_name="checkin")
     dia = DateField()
     entrada_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
     saida_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)

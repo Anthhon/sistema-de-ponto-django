@@ -199,6 +199,27 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     flex-direction: column;
     justify-content: center;
 }
+.check-box{
+    padding: 20px;
+    margin: 0 125px 0 280px;
+    
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 10px #1e1e1e35;
+}
+.check-row{
+    margin: 0 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: left;
+}
+.main-check{
+    padding: 0 40px 0 0;
+    font-size: 24px;
+    font-weight: 400;
+}
 
 
 
