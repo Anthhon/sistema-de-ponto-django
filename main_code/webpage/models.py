@@ -1,5 +1,5 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db.models import CharField, DateField, IntegerField, Model, ForeignKey, RESTRICT, CASCADE
+from django.db.models import (CharField, DateField, IntegerField, Model, ForeignKey, TimeField, RESTRICT, CASCADE)
 from django.db import models
 
 class Genero(Model):
@@ -11,6 +11,7 @@ class Cargo(Model):
     cargo = CharField(max_length=50)
     def __str__(self):
         return self.cargo
+
 
 
 
@@ -33,7 +34,18 @@ class Funcionario(Model):
     CPF = IntegerField()
 
     def __str__(self):
-        return (f"{self.nome} {self.sobrenome} - {self.cargo}")
+        return (f"{self.nome} {self.sobrenome}")
+
+class CheckIn(Model):
+    funcionario = ForeignKey(Funcionario, on_delete=RESTRICT)
+    dia = DateField()
+    entrada_manhã = TimeField(auto_now=False, auto_now_add=False, default=None, null=True)
+    saida_manhã = TimeField(auto_now=False, auto_now_add=False, default=None, null=True)
+    entrada_tarde = TimeField(auto_now=False, auto_now_add=False, default=None, null=True)
+    saida_tarde = TimeField(auto_now=False, auto_now_add=False, default=None, null=True)
+
+    def __str__(self):
+        return (f"{self.funcionario} - {self.dia}")
 
 
 class Horario(Model):
