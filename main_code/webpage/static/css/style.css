@@ -216,6 +216,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     margin: 0 125px 0 280px;
     
     display: flex;
+    justify-content: space-between;
     border-radius: 10px;
     flex-direction: row;
     background-color: #f1f1f1;
