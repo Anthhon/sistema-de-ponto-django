@@ -2,8 +2,7 @@
 
 from django.urls import path
 
-from . import views
-from .views import (aboutPage, detailEmployees, employeesPage, homePage, mainPage)
+from .views import (aboutPage, detailEmployees, employeesPage, homePage, mainPage, postCheckin)
 
 app_name = "webpage"
 
@@ -13,5 +12,5 @@ urlpatterns = [
     path('sobre/', aboutPage, name='aboutpage-view'),
     path('colaborador/',employeesPage,name='employeespage-view'),
     path('colaborador-info/<int:id>', detailEmployees, name='employeeinfo-view'),
-    path('',views.aboutPage),
+    path('adicionando-horario/', postCheckin, name="post-checkin")
 ]

@@ -51,33 +51,43 @@
 
                         <p>Manhã</p>
                         <span class="button-row">
-                            <form action="#" method="POST">
+                            <form action="{% url 'webpage:post-checkin' %}" method="POST">
                                 {% csrf_token %}
-                                <input type="submit" value="Entrada">
+                                <button type="submit" name="entrada_manha">
+                                    Entrada
+                                </button>
                             </form>
-                            <form action="#" method="POST">
+                            <form action="{% url 'webpage:post-checkin' %}" method="POST">
                                 {% csrf_token %}
-                                <input type="submit" value="Saída">
+                                <button type="submit" name="saida_manha">
+                                    Saída
+                                </button>
                             </form>
                         </span>
                         
                         <p>Tarde</p>
                         <span class="button-row">
-                            <form action="#" method="POST">
+                            <form action="{% url 'webpage:post-checkin' %}" method="POST">
                                 {% csrf_token %}
-                                <input type="submit" value="Entrada">
+                                <button type="submit" name="entrada_tarde">
+                                    Entrada
+                                </button>
                             </form>
-                            <form action="#" method="POST">
+                            <form action="{% url 'webpage:post-checkin' %}" method="POST">
                                 {% csrf_token %}
-                                <input type="submit" value="Saída">
+                                <button type="submit" name="saida_tarde">
+                                    Saída
+                                </button>
                             </form>
                         </span>
 
                         <!-- Extra -->
                         <span class="button-row" id="extra-button">
-                            <form action="#" method="POST">
+                            <form action="{% url 'webpage:post-checkin' %}" method="POST">
                                 {% csrf_token %}
-                                <input type="submit" value="Extra">
+                                <button type="submit" name="extra">
+                                    Extra
+                                </button>
                             </form>
                         </span>
                     </div>

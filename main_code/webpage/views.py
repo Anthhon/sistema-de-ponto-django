@@ -1,8 +1,8 @@
 # from django.views.generic import DetailView, ListView
-import datetime
 from .models import CheckIn, Funcionario
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
+from django.http import HttpResponse
 
 
 def mainPage(request):
@@ -38,3 +38,14 @@ def detailEmployees(request, id):
     checkins = paginator.get_page(page)
 
     return render(request, 'employees-info.html', {'employee_info': employee_info, 'checkins': checkins})
+
+def postCheckin(request):
+    if request.method == 'POST':
+        if 'entrada_manha' in request.POST:
+            return HttpResponse('<h1>Entrada manhã funcionando</h1>')
+        elif 'saida_manha' in request.POST:
+            return HttpResponse('<h1>Saida manhã funcionando</h1>')
+        elif 'entrada_tarde' in request.POST:
+            return HttpResponse('<h1>Entrada tarde funcionando</h1>')
+        elif 'saida_tarde' in request.POST:
+            return HttpResponse('<h1>Saída tarde funcionando</h1>')
