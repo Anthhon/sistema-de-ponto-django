@@ -58,7 +58,7 @@
                         <strong>Idade:</strong> {{ employee_info.idade }} anos
                     </p>
                     <p class="main-description">
-                        <strong>Gênero:</strong> {{ employee_info.gênero }}
+                        <strong>Genero:</strong> {{ employee_info.genero }}
                     </p>
                 </content>
                 <content class="desc-row">
@@ -81,7 +81,20 @@
                 </content>
             </div>
             <h1 class="main-title">Histórico da semana</h1>
-            <div class="desc-box">
+            <div class="check-box">
+                {% for checkin in checkins %}
+                <content class="check-row">
+                    <p class="main-check">
+                        <ion-icon name="calendar-outline"></ion-icon> {{checkin.dia}}
+                    </p>
+                    <p class="main-check">
+                        <strong>Manhã:</strong> {{checkin.entrada_manha}} - {{checkin.saida_manha}}
+                    </p>
+                    <p class="main-check">
+                        <strong>Tarde:</strong> {{checkin.entrada_tarde}} - {{checkin.saida_tarde}}
+                    </p>
+                </content>
+                {% endfor %}
             </div>
         </content>
     </main>
