@@ -217,7 +217,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 }
 .main-check{
     padding: 0 40px 0 0;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
 }
 
@@ -245,11 +245,12 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 
     color: black;
     font-size: larger;
+    text-anchor: middle;
     text-decoration: none;
 }
 .employee-box > p{
     margin: 0 30px;
-    padding-left: 15px;
+    padding-left: 0;
 }
 
 

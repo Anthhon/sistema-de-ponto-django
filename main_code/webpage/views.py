@@ -16,7 +16,7 @@ def aboutPage(request):
     return render(request, 'about.html')
 
 def employeesPage(request):
-    employees_list = Funcionario.objects.all()
+    employees_list = Funcionario.objects.all().order_by('nome')
 
     paginator = Paginator(employees_list, 6)
 
