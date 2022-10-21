@@ -36,7 +36,7 @@
                     
                     <!-- Horário -->
                     <span class="pres-input-span">
-                        <input type="time" id="quantity" name="quantity" min="5" max="5" placeholder="Digite um horário" class="pres-input">
+                        <input type="time" id="horario" name="horario" min="5" max="5" placeholder="Digite um horário" class="pres-input" required>
                     </span>
 
                     <!-- Funcionário -->
@@ -51,19 +51,34 @@
 
                         <p>Manhã</p>
                         <span class="button-row">
-                            <button type="submit">Entrada</button>
-                            <button type="submit">Saída</button>
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="Entrada">
+                            </form>
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="Saída">
+                            </form>
                         </span>
                         
                         <p>Tarde</p>
                         <span class="button-row">
-                            <button type="submit">Entrada</button>
-                            <button type="submit">Saída</button>
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="Entrada">
+                            </form>
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="Saída">
+                            </form>
                         </span>
 
                         <!-- Extra -->
                         <span class="button-row" id="extra-button">
-                            <button type="submit">Hora extra</button>
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="Extra">
+                            </form>
                         </span>
                     </div>
                 </div>

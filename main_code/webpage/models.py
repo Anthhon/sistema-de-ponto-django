@@ -1,6 +1,11 @@
+from email.policy import default
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db.models import (CharField, DateField, IntegerField, Model, ForeignKey, TimeField, RESTRICT, CASCADE)
+from datetime import datetime
 from django.db import models
+from django import forms
+
+NOW = datetime.now
 
 class Genero(Model):
     Genero = CharField(max_length=35)
@@ -38,7 +43,7 @@ class Funcionario(Model):
 class CheckIn(Model):
     #apesar do python aceitar pontuações não coloque, pois as urls tem problemas com pontuações
     funcionario = ForeignKey(Funcionario, on_delete=RESTRICT)
-    dia = DateField()
+    dia = DateField(default=NOW)
     entrada_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
     saida_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
     entrada_tarde = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
