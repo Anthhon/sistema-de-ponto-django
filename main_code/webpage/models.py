@@ -1,11 +1,12 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db.models import (CharField, DateField, IntegerField, Model, ForeignKey, TimeField, RESTRICT, CASCADE)
 from datetime import datetime, time
-from django.db import models
-from django import forms
+
 
 
 NOW = datetime.now
+
+
 
 class Genero(Model):
     Genero = CharField(max_length=35)
@@ -17,7 +18,6 @@ class Cargo(Model):
     def __str__(self):
         return self.cargo
 
-# Create your models here.
 class Funcionario(Model):
     nome = CharField(max_length=32)
     sobrenome = CharField(max_length=32)
@@ -43,7 +43,6 @@ class Funcionario(Model):
 class CheckIn(Model):
     funcionario = ForeignKey(Funcionario, on_delete=RESTRICT)
     dia = DateField(default=NOW)
-    """  """
     entrada_manha = TimeField(auto_now=False, auto_now_add=False, default=time(0,0), null=True,blank=True)
     saida_manha = TimeField(auto_now=False, auto_now_add=False, default=time(0,0), null=True,blank=True)
     entrada_tarde = TimeField(auto_now=False, auto_now_add=False, default=time(0,0), null=True,blank=True)

@@ -20,7 +20,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 
 .pres-content-div{
     display: block;
-    margin-top: 8%;
+    margin-top: 7%;
 }
 .pres-content-div > img{
     width: 16%;
@@ -102,7 +102,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     flex-direction: row;
     justify-content: center;
 }
-.button-row > form > button{
+.button-row > input{
     cursor: pointer;
 
     margin: 0 5px;
@@ -119,8 +119,13 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 
     transition: all 0.3s ease 0s;
 }
-.button-row > form > button:hover{
+.button-row > input:hover{
     padding: 8px 36px;
+}
+#employees{
+    padding: 2px 8px;
+    border: 0 solid black;
+    box-shadow: 0 0 8px #1e1e1e35;
 }
 #employees > option{
     text-align: center;
@@ -172,7 +177,7 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
 /* Página principal */
 
 .main-title{
-    padding: 48px 0 40px 0;
+    padding: 48px 0 20px 0;
     margin: 0 125px 0 280px;
 
     font-size: 46px;
@@ -219,6 +224,15 @@ aside, .siderbar-link-main, .sidebar-img, .sidebar-link{
     padding: 0 40px 0 0;
     font-size: 22px;
     font-weight: 400;
+}
+#main-title-historic{
+    padding-bottom: 0;
+}
+.carreer-time{
+    padding: 0 0 30px 0;
+    margin: 0 125px 0 280px;
+
+    font-size: 20px;
 }
 
 

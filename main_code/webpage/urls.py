@@ -13,6 +13,6 @@ urlpatterns = [
     path('sobre/', aboutPage, name='aboutpage-view'),
     path('colaborador/',employeesPage,name='employeespage-view'),
     path('colaborador-info/<int:id>', detailEmployees, name='employeeinfo-view'),
-    path('post-teste/',register_time_employee,name='register_time_employee'),
+    path('registrando-horario/',register_time_employee,name='register_time_employee'),
     path('',views.aboutPage),
 ]

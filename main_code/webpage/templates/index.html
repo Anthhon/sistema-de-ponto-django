@@ -41,6 +41,7 @@
                         <span class="pres-input-span">
                             <input type="time" id="horario" name="horario" min="5" max="5" placeholder="Digite um horário" class="pres-input" required>
                         </span>
+
                         <!-- Funcionário -->
                         <select name="employees" id="employees">
                             {% for employee in employees %}
@@ -59,10 +60,6 @@
                             <span class="button-row">
                                     <input type="submit" name="entrada-tarde" value="Entrada">
                                     <input type="submit" name="saida-tarde" value="Saída">
-                            </span>
-                            <!-- Extra -->
-                            <span class="button-row" id="extra-button">
-                                <input type="submit" value="extra">
                             </span>
                         </div>
                     </form>
@@ -84,14 +81,3 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<!-- 
-    Primeiro nome
-    Sobrenome
-    Data de admissão
-    Idade
-    Sexo
-    Data de aniversário
-    Endereço
-    CPF
--->
