@@ -35,52 +35,42 @@
                 <div class="ep-box">
                     
                     <!-- Horário -->
-                    <span class="pres-input-span">
-                        <input type="time" id="horario" name="horario" min="5" max="5" placeholder="Digite um horário" class="pres-input" required>
-                    </span>
+                    
 
-                    <!-- Funcionário -->
-                    <select name="employees" id="employees">
-                        {% for employee in employees %}
-                        <option value="{{ employee.pk }}">{{ employee.nome }} {{ employee.sobrenome }}</option>
-                        {% endfor %}
-                    </select>
-
-                    <!-- Botões -->
-                    <div class="buttons-main-div">
-
-                        <p>Manhã</p>
-                        <span class="button-row">
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" value="Entrada">
-                            </form>
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" value="Saída">
-                            </form>
+                    <form action="{% url 'webpage:register_time_employee' %}" method='post'>
+                        <span class="pres-input-span">
+                            <input type="time" id="horario" name="horario" min="5" max="5" placeholder="Digite um horário" class="pres-input" required>
                         </span>
-                        
-                        <p>Tarde</p>
-                        <span class="button-row">
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" value="Entrada">
-                            </form>
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" value="Saída">
-                            </form>
-                        </span>
+                        {% csrf_token %}
+                        <!-- Funcionário -->
+                        <select name="employees" id="employees">
+                            {% for employee in employees %}
+                            <option value="{{ employee.pk }}">{{ employee.nome }} {{ employee.sobrenome }}</option>
+                            {% endfor %}
+                        </select>
 
-                        <!-- Extra -->
-                        <span class="button-row" id="extra-button">
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" value="Extra">
-                            </form>
-                        </span>
-                    </div>
+                            <!-- Botões -->
+                        <div class="buttons-main-div">
+                            <p>Manhã</p>
+                            <span class="button-row">
+                                    <input type="submit" name="entrada-manha" value="Entrada">
+                                    <input type="submit" name="saida-manha" value="Saida">
+                            </span>
+                            <p>Tarde</p>
+                            <span class="button-row">
+                                    <input type="submit" manha="entrada-tarde" value="Entrada">
+                                    <input type="submit" name="saida-tarde" value="Saída">
+                            </span>
+                            <!-- Extra -->
+                            <span class="button-row" id="extra-button">
+                                <input type="submit" value="extra">
+                            </span>
+                        </div>
+                    </form>
+                    
+                    
+
+                    
                 </div>
 
                 <!-- Veja mais -->
