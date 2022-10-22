@@ -1,6 +1,9 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db.models import (CharField, DateField, IntegerField, Model, ForeignKey, TimeField, RESTRICT, CASCADE)
-from datetime import datetime
+from datetime import datetime, time
+from django.db import models
+from django import forms
+
 
 NOW = datetime.now
 
@@ -40,10 +43,11 @@ class Funcionario(Model):
 class CheckIn(Model):
     funcionario = ForeignKey(Funcionario, on_delete=RESTRICT)
     dia = DateField(default=NOW)
-    entrada_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
-    saida_manha = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
-    entrada_tarde = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
-    saida_tarde = TimeField(auto_now=False, auto_now_add=False, default=None, null=True,blank=True)
+    """  """
+    entrada_manha = TimeField(auto_now=False, auto_now_add=False, default=time(0,0), null=True,blank=True)
+    saida_manha = TimeField(auto_now=False, auto_now_add=False, default=time(0,0), null=True,blank=True)
+    entrada_tarde = TimeField(auto_now=False, auto_now_add=False, default=time(0,0), null=True,blank=True)
+    saida_tarde = TimeField(auto_now=False, auto_now_add=False, default=time(0,0), null=True,blank=True)
 
     def __str__(self):
         return (f"{self.funcionario} - {self.dia}")
