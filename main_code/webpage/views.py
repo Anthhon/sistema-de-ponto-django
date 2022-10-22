@@ -29,7 +29,7 @@ def employeesPage(request):
 def detailEmployees(request, id):
     employee_info = get_object_or_404(Funcionario, pk=id)
     
-    checkin_list = Funcionario.objects.all()
+    checkin_list = CheckIn.objects.filter(funcionario=employee_info)
 
     paginator = Paginator(checkin_list, 1)
 
@@ -37,4 +37,4 @@ def detailEmployees(request, id):
 
     checkins = paginator.get_page(page)
 
-    return render(request, 'employees-info.html', {'employee_info': employee_info, 'checkin': checkin_list})
+    return render(request, 'employees-info.html', {'employee_info': employee_info, 'checkins': checkins})
