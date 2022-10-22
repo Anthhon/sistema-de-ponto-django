@@ -42,6 +42,8 @@
     <!-- Conteúdo da página -->
     <main>
         <content>
+
+            <!-- Descrição colaborador -->
             <h1 class="main-title">Colaborador</h1>
             <div class="desc-box">
                 <content class="desc-row">
@@ -80,7 +82,10 @@
                     </p>
                 </content>
             </div>
-            <h1 class="main-title">Histórico da semana</h1>
+
+            <!-- Histórico de horários -->
+            <h1 class="main-title" id="main-title-historic"><ion-icon name="time-outline"></ion-icon>Histórico</h1>
+            <p class="carreer-time">Horas trabalhadas: {{horas_trabalhadas}}</p>
             <div class="check-box">
                 {% for checkin in checkins %}
                 <content class="check-row">
@@ -98,9 +103,10 @@
             </div>
         </content>
 
+        <!-- Rodapé  -->
         <footer class="footer-buttons">
             <span>
-                <a href="/admin/webpage/funcionario/{{ employee_info.id }}/change/?_to_field=id&_popup=1" class="footer-links">Editar informações</a>
+                <a href="/admin/webpage/funcionario/{{ employee_info.id }}/change/?_to_field=id" class="footer-links">Editar informações</a>
             </span>
         </footer>
     </main>
