@@ -80,12 +80,12 @@
                     </p>
                 </content>
             </div>
-            <h1 class="main-title">Histórico da semana</h1>
+            <h1 class="main-title">Histórico da semana, horas trabalhadas:{{horas_trabalhadas}}</h1>
             <div class="check-box">
-                {% for checkin in employee_info.checkin.all %}
+                {% for checkin in checkins %}
                 <content class="check-row">
                     <p class="main-check">
-                        {{checkin.dia}}
+                        <ion-icon name="calendar-outline"></ion-icon> {{checkin.dia}}
                     </p>
                     <p class="main-check">
                         <strong>Manhã:</strong> {{checkin.entrada_manha}} - {{checkin.saida_manha}}
@@ -97,6 +97,12 @@
                 {% endfor %}
             </div>
         </content>
+
+        <footer class="footer-buttons">
+            <span>
+                <a href="/admin/webpage/funcionario/{{ employee_info.id }}/change/?_to_field=id&_popup=1" class="footer-links">Editar informações</a>
+            </span>
+        </footer>
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
