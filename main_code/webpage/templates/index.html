@@ -34,14 +34,13 @@
                 <!-- Ponto eletrônico -->
                 <div class="ep-box">
                     
-                    <!-- Horário -->
-                    
-
                     <form action="{% url 'webpage:register_time_employee' %}" method='post'>
+                        {% csrf_token %}
+
+                        <!-- Horário -->
                         <span class="pres-input-span">
                             <input type="time" id="horario" name="horario" min="5" max="5" placeholder="Digite um horário" class="pres-input" required>
                         </span>
-                        {% csrf_token %}
                         <!-- Funcionário -->
                         <select name="employees" id="employees">
                             {% for employee in employees %}
@@ -58,7 +57,7 @@
                             </span>
                             <p>Tarde</p>
                             <span class="button-row">
-                                    <input type="submit" manha="entrada-tarde" value="Entrada">
+                                    <input type="submit" name="entrada-tarde" value="Entrada">
                                     <input type="submit" name="saida-tarde" value="Saída">
                             </span>
                             <!-- Extra -->
