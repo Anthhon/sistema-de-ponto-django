@@ -29,5 +29,4 @@ de horários e funcionários para que qualquer pessoa possa usar e administrar o
 - [@Jonathas David](https://github.com/Rip4568)
 ## Licença
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
+- MIT
