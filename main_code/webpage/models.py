@@ -8,11 +8,6 @@ NOW = datetime.now
 
 
 
-class Genero(Model):
-    Genero = CharField(max_length=35)
-    def __str__(self):
-        return self.Genero
-
 class Cargo(Model):
     cargo = CharField(max_length=50)
     def __str__(self):
