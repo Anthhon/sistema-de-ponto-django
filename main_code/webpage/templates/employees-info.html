@@ -20,6 +20,10 @@
             <img src="{% static 'img/defaultlogo_small.png' %}" class="sidebar-img" alt="Seletos Lancamentos">
         </header>
         <ul class="siderbar-link-main">
+            <li><a href="/admin/" class="sidebar-link" target="_blank" rel="noreferrer noopener">{% comment %}  {% endcomment %}
+                <span class="sidebar-icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                <span class="sidebar-text">Página de Admin</span>
+            </a></li>
             <li><a href="{% url 'webpage:webpage-view' %}" class="sidebar-link">
                 <span class="sidebar-icon"><ion-icon name="home-outline"></ion-icon></span>
                 <span class="sidebar-text">Página Principal</span>
