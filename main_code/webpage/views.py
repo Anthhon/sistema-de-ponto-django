@@ -17,17 +17,13 @@ def aboutPage(request):
 
 def employeesPage(request):
     employees_list = Funcionario.objects.all().order_by('nome')
-
     paginator = Paginator(employees_list, 6)
-
     page = request.GET.get('page')
-
     employees = paginator.get_page(page)
 
     return render(request, 'employees.html', {'employees': employees})
 
 def detailEmployees(request, id):
-
     # Solicita as informações do colaborador
     employee_info = get_object_or_404(Funcionario, pk=id)
     
@@ -46,10 +42,8 @@ def detailEmployees(request, id):
     horas_teste = str(horas_totais_trabalhadas)
     tempo_array = horas_teste.split(':')
     tempo_real = f"{tempo_array[0]} Horas e {tempo_array[1]} Minutos"
-    # print(tempo_real)
 
     return render(request, 'employees-info.html', {'employee_info': employee_info, 'checkins': checkins, 'horas_trabalhadas':tempo_real})
-
 
 def register_time_employee(request,*args, **kwargs):
     funcionario = Funcionario.objects.get(id=request.POST.get('employees'))
